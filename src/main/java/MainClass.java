@@ -7,7 +7,7 @@ public class MainClass {
         Store store1 = new CaliforniaPizzaStore();
         Store store2 = new NYPizzaStore();
 
-        store1.orderPizza().print();
-        store2.orderPizza().print();
+        store1.orderPizza("cheese").print();
+        store2.orderPizza("cheese").print();
     }
 }

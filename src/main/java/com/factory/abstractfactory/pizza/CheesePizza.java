@@ -3,11 +3,12 @@ package com.factory.abstractfactory.pizza;
 import com.factory.abstractfactory.factories.NYPizzaFactory;
 import com.factory.abstractfactory.factories.PizzaAbstractFactory;
 
-public class NYCheesePizza extends Pizza {
+public class CheesePizza extends Pizza {
     PizzaAbstractFactory factory;
 
-    public NYCheesePizza(){
-        factory = new NYPizzaFactory();
+    public CheesePizza(PizzaAbstractFactory factory){
+        this.factory = factory;
+        this.name = "Cheese Pizza";
     }
 
     @Override

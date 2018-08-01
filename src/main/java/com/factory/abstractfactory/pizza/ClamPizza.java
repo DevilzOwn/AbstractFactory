@@ -1,13 +1,14 @@
 package com.factory.abstractfactory.pizza;
 
-import com.factory.abstractfactory.factories.CaliforniaPizzaFactory;
+import com.factory.abstractfactory.factories.NYPizzaFactory;
 import com.factory.abstractfactory.factories.PizzaAbstractFactory;
 
-public class CaliforniaCheesePizza extends Pizza {
+public class ClamPizza extends Pizza {
     PizzaAbstractFactory factory;
 
-    public CaliforniaCheesePizza(){
-        factory = new CaliforniaPizzaFactory();
+    public ClamPizza(PizzaAbstractFactory factory){
+        this.factory = factory;
+        this.name = "Clam Pizza";
     }
 
     @Override
@@ -22,4 +23,5 @@ public class CaliforniaCheesePizza extends Pizza {
     public void cut() {
         System.out.println("Cutting Triangular Slices.");
     }
+
 }

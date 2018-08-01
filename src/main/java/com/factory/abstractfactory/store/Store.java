@@ -5,7 +5,8 @@ import com.factory.abstractfactory.pizza.Pizza;
 public abstract class Store {
     Pizza pizza;
 
-    public Pizza orderPizza(){
+    public Pizza orderPizza(String type){
+        createPizza(type);
         pizza.prepare();
         pizza.bake();
         pizza.box();
@@ -13,4 +14,6 @@ public abstract class Store {
 
         return pizza;
     }
+
+    public abstract void createPizza(String type);
 }

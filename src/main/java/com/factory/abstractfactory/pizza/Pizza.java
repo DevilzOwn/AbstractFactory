@@ -17,6 +17,8 @@ public abstract class Pizza {
     private Dough dough;
     private Clam clam;
     private Cheese cheese;
+    protected String name;
+
     private List<String> toppings = new ArrayList<String>();
 
     public void setSauce(Sauce sauce) {
@@ -50,6 +52,7 @@ public abstract class Pizza {
 
     public void print(){
         System.out.println("-------------------------------------------");
+        System.out.println("Name: " + this.name);
         System.out.println("Sauce : " + this.sauce);
         System.out.println("Dough : " + this.dough);
         System.out.println("Clam : " + this.clam);
@@ -60,4 +63,5 @@ public abstract class Pizza {
     public abstract void prepare();
 
     public abstract void cut();
+
 }
